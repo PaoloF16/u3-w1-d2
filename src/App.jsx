@@ -2,9 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
-import { CoL, Row } from "react-bootstrap"
 import AlertLibrary from "./AlertLibrary"
 import AllTheBooks from "./AllTheBooks"
+import SingleBook from "./SingleBook"
+import BookList from "./BookList"
 
 function App() {
   return (
@@ -15,11 +16,12 @@ function App() {
         </header>
         <main className="flex-grow-1">
           <AlertLibrary></AlertLibrary>
-          <Row>
-            <CoL className="d-flex flex-column ">
-              <AllTheBooks></AllTheBooks>
-            </CoL>
-          </Row>
+          {/* Welcome Alert */}
+          <BookList></BookList>
+
+          {/* Area Single Book */}
+          <AllTheBooks></AllTheBooks>
+          {/* Area Books */}
         </main>
         <footer>
           <Footer></Footer>
