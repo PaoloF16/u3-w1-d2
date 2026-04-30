@@ -11,7 +11,7 @@ const CommentArea = ({ asin }) => {
   useEffect(() => {
     fetch(`${ApiUrl}${asin}`, {
       headers: {
-        Authorization: Token,asdsaddad
+        Authorization: Token,
       },
     })
       .then((res) => res.json())
