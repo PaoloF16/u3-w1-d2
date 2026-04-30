@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { FloatingLabel, Form, ListGroup } from "react-bootstrap";
+import CommentsList from "./CommentsLits";
+import AddComment from "./AddComment"
 
 const ApiUrl = "https://striveschool-api.herokuapp.com/api/comments/";
 const Token =
@@ -20,19 +21,10 @@ const CommentArea = ({ asin }) => {
 
   return (
     <>
-      <ListGroup>
-        {comments.map((c) => (
-          <ListGroup.Item key={c._id}>{c.comment}</ListGroup.Item>
-        ))}
-      </ListGroup>
-
-      <FloatingLabel controlId="floatingTextarea2" label="Comments">
-        <Form.Control
-          as="textarea"
-          placeholder="Leave a comment here"
-          style={{ height: "100px" }}
-        />
-      </FloatingLabel>
+       <>
+      <CommentsList comments={comments} />
+      <AddComment asin={asin} />
+    </>
     </>
   );
 };
