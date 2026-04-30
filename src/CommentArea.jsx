@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CommentsList from "./CommentsLits";
+import CommentsList from "./CommentsList";
 import AddComment from "./AddComment"
 
 const ApiUrl = "https://striveschool-api.herokuapp.com/api/comments/";
@@ -22,7 +22,7 @@ const CommentArea = ({ asin }) => {
   return (
     <>
        <>
-      <CommentsList comments={comments} />
+      <CommentsList comments={comments} setComments={setComments} />
       <AddComment asin={asin} />
     </>
     </>
